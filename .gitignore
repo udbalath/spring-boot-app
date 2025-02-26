@@ -1,0 +1,69 @@
+# Java compiled output
+*.class
+
+# Maven build output
+target/
+*.jar
+*.war
+*.ear
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Spring Boot specific
+*.log
+logs/
+application*.properties  # Ignore local property overrides (optional)
+!application.properties  # Keep the main application.properties if tracked
+*.yml                    # Ignore local YAML overrides (optional)
+!application.yml         # Keep the main application.yml if tracked
+*.h2.db                  # H2 database files (if using H2)
+*.mv.db
+*.db
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.eclipse/
+.settings/
+.classpath
+.project
+.springBeans
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Dependency directories
+lib/
+dependencies/
+
+# Build and runtime
+build/
+out/
+bin/
+*.pid                    # Process ID files from Spring Boot
+*.lock
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Environment files
+.env
+*.env.*
+
+# Test-related (optional)
+*.test
+test-output/

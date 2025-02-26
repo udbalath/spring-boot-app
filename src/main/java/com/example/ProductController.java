@@ -1,15 +1,17 @@
 package com.example;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.commons.collections.CollectionUtils;
 import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.*;
-import javax.validation.constraints.*;
-import java.util.*;
+
+import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api")
-class ProductController {
+public class ProductController {
     private static final Logger logger = Logger.getLogger(ProductController.class);
     private final List<Product> products = new ArrayList<>();
 
@@ -33,8 +35,8 @@ class ProductController {
     @GetMapping("/product-names")
     public List<String> getProductNames() {
         logger.info("Fetching product names");
-        List<String> names = new ArrayList<>();
-        CollectionUtils.collect(products, input -> input.getName(), names);
-        return names;
+        return products.stream()
+                .map(Product::getName) // Extract product names
+                .collect(Collectors.toList());
     }
 }
