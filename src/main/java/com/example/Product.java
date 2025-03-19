@@ -1,6 +1,6 @@
 package com.example;
 
-import javax.validation.constraints.*;
+import jakarta.validation.constraints.*;
 
 class Product {
     @NotNull
