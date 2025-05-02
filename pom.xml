@@ -15,9 +15,9 @@
     </parent>
 
     <properties>
-        <java.version>1.8</java.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
     </properties>
 
@@ -86,10 +86,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version> <!-- Compatible with Spring Boot 2.3.12 -->
+                <version>3.14.0</version> <!-- Compatible with Spring Boot 2.3.12 -->
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+          <release>${java.version}</release>
                 </configuration>
             </plugin>
         </plugins>
